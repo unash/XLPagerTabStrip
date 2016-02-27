@@ -197,7 +197,7 @@
           updateIndicatorFromIndex:(NSInteger)fromIndex
                            toIndex:(NSInteger)toIndex
             withProgressPercentage:(CGFloat)progressPercentage
-             indexWasChanged:(BOOL)indexWasChanged
+                   indexWasChanged:(BOOL)indexWasChanged
 {
 }
 
@@ -441,13 +441,15 @@
 {
     if (self.containerView == scrollView && _pagerTabStripChildViewControllersForScrolling){
         _pagerTabStripChildViewControllersForScrolling = nil;
-        if (self.navigationController){
-            self.navigationController.view.userInteractionEnabled = YES;
-        }
-        else{
-            self.view.userInteractionEnabled = YES;
-        }
+        
         [self updateContent];
+    }
+    
+    if (self.navigationController){
+        self.navigationController.view.userInteractionEnabled = YES;
+    }
+    else{
+        self.view.userInteractionEnabled = YES;
     }
 }
 
