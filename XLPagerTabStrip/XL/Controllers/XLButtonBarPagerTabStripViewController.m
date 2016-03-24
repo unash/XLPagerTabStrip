@@ -26,7 +26,7 @@
 #import "XLButtonBarViewCell.h"
 #import "XLButtonBarPagerTabStripViewController.h"
 
-@interface XLButtonBarPagerTabStripViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface XLButtonBarPagerTabStripViewController ()
 
 @property (nonatomic) IBOutlet XLButtonBarView * buttonBarView;
 @property (nonatomic) BOOL shouldUpdateButtonBarView;
